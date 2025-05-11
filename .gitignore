@@ -1,63 +1,60 @@
-.vscode/
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+*.ipch
 
+# Build folders
 build/
-
-# Prerequisites
-*.d
+Debug/
+Release/
+x64/
+x64/Debug/
+x64/Release/
 
 # Compiled Object files
-*.slo
-*.lo
-*.o
 *.obj
+*.o
+*.lo
+*.slo
 
 # Precompiled Headers
 *.gch
 *.pch
 
+# Compiled Static libraries
+*.lib
+*.a
+*.la
+*.lai
+
 # Compiled Dynamic libraries
+*.dll
 *.so
 *.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
 # Executables
 *.exe
 *.out
 *.app
 
-# Ignore Visual Studio folders
-.vs/
-*.user
-*.suo
-*.VC.db
-*.VC.VC.opendb
-
-# Ignore IntelliSense PCH files
-*.ipch
-
-# Ignore build artifacts
-*.obj
-*.exe
+# Misc
 *.log
-*.pch
-*.pdb
 *.idb
-*.aps
+*.pdb
 *.ncb
+*.aps
+*.mod
+*.smod
+*.d
 
-# Ignore debug/release folders
-Debug/
-Release/
-x64/Debug/
-x64/Release/
-
+# VS Code
+.vscode/
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt

@@ -15,9 +15,9 @@ Giá trị IoU nằm trong khoảng [0, 1]:
 - IoU = 0: Không có sự trùng khớp giữa hai bounding box
 - IoU = 1: Hai bounding box hoàn toàn trùng khớp với nhau
 
-![Công thức IoU](../Image/IoU2.jpg)
+![Công thức IoU](Image/IoU2.jpg)
 
-![Minh họa IoU với khung dự đoán màu đỏ và khung chuẩn màu đen](../Image/IoU1.jpg)
+![Minh họa IoU với khung dự đoán màu đỏ và khung chuẩn màu đen](Image/IoU1.jpg)
 
 ## 3. Ứng dụng
 Ứng dụng của IoU trong Non-max Suppression (NMS): Trong trường hợp có nhiều khung giới hạn cho cùng một thực thể, chúng ta có thể loại bỏ các khung thừa với thuật toán Non-max Suppression.
@@ -29,9 +29,9 @@ Thuật toán Non-Maximum Suppression sinh ra để loại bỏ đi các boundin
 
 Ví dụ output của một mô hình face detection:
 
-![Hình minh họa trước khi áp dụng NMS](../Image/before.png)
+![Hình minh họa trước khi áp dụng NMS](Image/before.png)
 
-![Hình minh họa sau khi áp dụng NMS](../Image/after.png)
+![Hình minh họa sau khi áp dụng NMS](Image/after.png)
 
 ## 2. Nội dung thuật toán:
 
@@ -52,13 +52,13 @@ Các ký hiệu:
 - thresh_iou: Ngưỡng IoU để loại bỏ các box thừa
 - keep: Tập các box sau khi đã loại bỏ các box thừa
 
-![Hình minh họa thuật toán NMS](../Image/nms1.jpg)
+![Hình minh họa thuật toán NMS](Image/nms1.jpg)
 
 Thuật toán bao gồm 3 bước:
 
 Bước 1: Chọn box S có confidence score cao nhất trong tập P, loại bỏ box đó ra khỏi tập P và thêm box đó vào tập keep.
 
-![Hình minh họa bước 1](../Image/nms2.jpg)
+![Hình minh họa bước 1](Image/nms2.jpg)
 
 Bước 2: Thực hiện tính toán IoU giữa box S vừa lấy ra ở bước 1 với toàn bộ các box còn lại trong tập P. Nếu có box nào trong P có IoU với box S đang xét mà lớn hơn ngưỡng thresh_iou thì loại bỏ box đó ra khỏi P.
 

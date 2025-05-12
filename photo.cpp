@@ -61,9 +61,9 @@ int main(int argc, char** argv) {
     }
 
     auto resultImg = drawRectsAndPoints(img, data);
-    cv::Mat resizedImg;
+    /*cv::Mat resizedImg;
     cv::resize(resultImg, resizedImg, cv::Size(0, 0), 0.5, 0.5); // Resize to 50%
-    cv::imshow("test-oc", resizedImg);
+    cv::imshow("test-oc", resizedImg);*/
     cv::imshow("test-oc", resultImg);
     cv::waitKey(0);
 

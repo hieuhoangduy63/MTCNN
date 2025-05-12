@@ -6,7 +6,7 @@ nó đo mức độ trùng khớp giữa Predicted Bounding Box và Ground Truth
 
 2.Công thức
 
-Image/IoU2.jpg
+![Alt text]Image/IoU2.jpg
 
 Area of Overlap: Diện tích giao nhau giữa Predicted Bounding Box và Ground Truth Bounding Box.
 Area of Union: Diện tích hợp của cả hai bounding box.
@@ -15,7 +15,7 @@ Giá trị IoU nằm trong khoảng [0, 1].
 - IoU = 0: Không có sự trùng khớp giữa hai bounding box.
 - IoU = 1: Hai bounding box hoàn toàn trùng khớp với nhau.
 
-Image/IoU1.jpg
+![Alt text]Image/IoU1.jpg
 
 //màu đỏ là khung được dự đoán, màu đen là khung chuẩn
 
@@ -32,12 +32,12 @@ thuật toán Non-Maximum Suppression sinh ra để loại bỏ đi các boundin
 
 Ví dụ output của một mô hình face detection khi chưa được xử lý bằng NMS:
 
-Image/before.png
+![Alt text]Image/before.png
 
 khi chưa áp dụng thuật toán NMS thì có rất nhiều bounding box cho cùng 1 khuôn mặt trong ảnh. 
 Và khi áp dụng NMS thì ta sẽ thu được kết quả như hình dưới đây:
 
-Image/after.png
+![Alt text]Image/after.png
 
 
 2. Nội dung thuật toán:
@@ -61,13 +61,15 @@ Các ký hiệu:
 - thresh_iou: Ngưỡng IoU để loại bỏ các box thừa
 - keep: Tập các box sau khi đã loại bỏ các box thừa
 
-Image/nms1.jpg
+![Alt text]Image/nms1.jpg
 
 Thuật toán bao gồm 3 bước:
 
 Bước 1: Chọn box S có confidence score cao nhất trong tập P, loại bỏ box đó ra khỏi tập P và thêm box đó vào tập keep.
-Image/nms2.jpg
+![Alt text]Image/nms2.jpg
+
 Bước 2 Thực hiện tính toán IOU giữa box S vừa lấy ra ở bước 1 với toàn bộ các box còn lại trong tập P. 
 Nếu có box nào trong P có IOU với box S đang xét mà lớn hơn ngưỡng thresh_iou thì loại bỏ box đó ra khỏi P
+
 Bước 3 Lặp lại bước 1 cho đến khi P không còn box nào.
 Sau khi kết thúc thuật toán thì keep chứa toàn bộ những box sau khi đã loại bớt các box thừa.
